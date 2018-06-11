@@ -51,10 +51,13 @@ def divide_function()
 end
 
 # asks what type of problem you would like to perform 
+
 puts "Would you like to [add] [subtract] [multiply] or [divide]?"
 Response = gets.chomp
-if Response =="add"
-    add_function
+
+   
+if Response == "add"
+   add_function
 elsif Response == "subtract"
     subtract_function
 elsif Response == "multiply"
@@ -62,4 +65,12 @@ elsif Response == "multiply"
 else Response == "divide"
     divide_function
 end
+
+# if Response =="add"|| Response == "subtract" || Response == "multiply" || response == "divide" 
+
+
+
+#     def math(num1,action,num2)
+#         num1 action num2
+#     end
 
