@@ -8,8 +8,8 @@ end
 
 def subtract_function
     puts "What numbers?"
-    num1 = gets.chomp.to_i  
-    num2 = gets.chomp.to_i
+    num1 = gets.chomp  
+    num2 = gets.chomp
     answer = num1.to_i - num2.to_i
     puts "The answer is #{answer}"
 end
