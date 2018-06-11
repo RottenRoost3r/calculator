@@ -1,3 +1,4 @@
+#a function to get number variables once a selection is made
 def maths
     puts "What numbers?"
     num1 = gets.chomp
@@ -12,6 +13,7 @@ def maths
     return_array
 end
 
+#a function to run an addition problem
 def add_function()
   numbers = maths()
   num1 = numbers[0]
@@ -20,6 +22,7 @@ def add_function()
     puts "The answer is #{answer}"
 end
 
+# a function to run a subtraction problem
 def subtract_function()
    numbers = maths()
    num1 = numbers[0]
@@ -28,6 +31,7 @@ def subtract_function()
     puts "The answer is #{answer}"
 end
 
+# a function to run a multiplication problem
 def multiply_function()
     numbers = maths()
    num1 = numbers[0]
@@ -37,6 +41,7 @@ def multiply_function()
     puts "The answer is #{answer}"
 end
 
+# a function to run a division problem
 def divide_function()
     numbers = maths()
    num1 = numbers[0]
@@ -45,6 +50,7 @@ def divide_function()
     puts "The answer is #{answer}"
 end
 
+# asks what type of problem you would like to perform 
 puts "Would you like to [add] [subtract] [multiply] or [divide]?"
 Response = gets.chomp
 if Response =="add"
@@ -56,3 +62,4 @@ elsif Response == "multiply"
 else Response == "divide"
     divide_function
 end
+
