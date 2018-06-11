@@ -53,6 +53,6 @@ elsif Response == "subtract"
     subtract_function
 elsif Response == "multiply"
     multiply_function
-elsif Response == "divide"
+else Response == "divide"
     divide_function
 end
