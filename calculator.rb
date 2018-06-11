@@ -1,5 +1,5 @@
 def add_function
-    print "What numbers?"
+    puts "What numbers?"
     num1 = gets.chomp
     num2 = gets.chomp
     answer = num1.to_i + num2.to_i 
@@ -7,7 +7,7 @@ def add_function
 end
 
 def subtract_function
-    print "What numbers?"
+    puts "What numbers?"
     num1 = gets.chomp.to_i  
     num2 = gets.chomp.to_i
     answer = num1.to_i - num2.to_i
@@ -15,7 +15,7 @@ def subtract_function
 end
 
 def multiply_function
-    print "What numbers?"
+    puts "What numbers?"
     num1 = gets.chomp
     num2 = gets.chomp
     answer = num1.to_i * num2.to_i
@@ -24,14 +24,14 @@ def multiply_function
 end
 
 def divide_function
-    print "What numbers?"
+    puts "What numbers?"
     num1 = gets.chomp
     num2 = gets.chomp
     answer = num1.to_i * num2.to_i
     puts "The answer is #{answer}"
 end
 
-print "Would you like to [add] [subtract] [multiply] or [divide]?"
+puts "Would you like to [add] [subtract] [multiply] or [divide]?"
 Response = gets.chomp
 
 if Response == "add"
