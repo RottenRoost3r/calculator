@@ -3,14 +3,21 @@ def maths
     puts "What numbers?"
     num1 = gets.chomp
     num2 = gets.chomp
-    # add_function(num1, num2)
-    # subtract_function(num1, num2)
-    # multiply_function(num1, num2)
-    # divide_function(num1, num2)
-    return_array = []
-    return_array << num1
-    return_array << num2
-    return_array
+    if num1.to_i.to_s == num1 && num2.to_i.to_s == num2
+
+
+        # add_function(num1, num2)
+        # subtract_function(num1, num2)
+        # multiply_function(num1, num2)
+        # divide_function(num1, num2)
+        return_array = []
+        return_array << num1.to_i
+        return_array << num2.to_i
+        return_array
+    else
+        puts "invalid"
+        exit
+    end
 end
 
 #a function to run an addition problem
@@ -18,7 +25,7 @@ def add_function()
   numbers = maths()
   num1 = numbers[0]
   num2 = numbers[1]
-    answer = num1.to_i + num2.to_i 
+    answer = num1 + num2
     puts "The answer is #{answer}"
 end
 
@@ -27,7 +34,7 @@ def subtract_function()
    numbers = maths()
    num1 = numbers[0]
    num2 = numbers[1]
-    answer = num1.to_i - num2.to_i
+    answer = num1 - num2
     puts "The answer is #{answer}"
 end
 
@@ -36,7 +43,7 @@ def multiply_function()
     numbers = maths()
    num1 = numbers[0]
    num2 = numbers[1]
-    answer = num1.to_i * num2.to_i
+    answer = num1 * num2
     
     puts "The answer is #{answer}"
 end
@@ -46,23 +53,27 @@ def divide_function()
     numbers = maths()
    num1 = numbers[0]
    num2 = numbers[1]
-    answer = num1.to_i / num2.to_i
-    puts "The answer is #{answer}"
+    if num2 == 0
+        puts "you can't divide by 0"
+    else
+        answer = num1 / num2
+        puts "The answer is #{answer}"
+    end
 end
 
 # asks what type of problem you would like to perform 
 
 puts "Would you like to [add] [subtract] [multiply] or [divide]?"
-Response = gets.chomp
+response = gets.chomp
 
    
-if Response == "add"
+if response == "add"
    add_function
-elsif Response == "subtract"
+elsif response == "subtract"
     subtract_function
-elsif Response == "multiply"
+elsif response == "multiply"
     multiply_function
-else Response == "divide"
+elsif response == "divide"
     divide_function
 end
 
